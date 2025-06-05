@@ -1,0 +1,404 @@
+/* ===== Tipografía y reset ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  background: #e6f2ea;
+  color: #2f4f4f;
+  flex-direction: column;
+  margin: 0;
+  padding:0;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+/* ===== Header ===== */
+header {
+  background: #a8d5ba;
+  color: #1b3b1b;
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+}
+
+/* ===== Pantalla Inicio - Imagen enfermera ===== */
+.contenedor-enfermera {
+  max-width: 250px;
+  margin: 2rem auto 1rem;
+}
+
+.img-enfermera {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Menú circular moderno ===== */
+.contenedor-menu-circular {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle-link {
+  background: #58a96a;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.circle-link:hover,
+.circle-link:focus {
+  background: #439354;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.circle-link span {
+  font-size: 0.8rem;
+  margin-top: 6px;
+  font-weight: 400;
+  user-select: none;
+}
+
+/* ===== Menú lateral ===== */
+.menu-lateral {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 200px;
+  background-color: #d7e8d3;
+  border-right: 3px solid #58a96a;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 999;
+  font-weight: 600;
+  color: #1b3b1b;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #2f4f4f;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  transition: background-color 0.25s ease;
+}
+
+.menu-lateral a:hover,
+.menu-lateral a:focus {
+  background-color: #58a96a;
+  color: white;
+  outline: none;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* ===== Main contenido ===== */
+main {
+ max-width: 900px;
+ margin: 2rem auto 6rem;
+ padding: 0; 
+ flex: 1 0 auto;
+}
+
+section {
+  background: transparent;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-width: 3px 0 0 0;
+  border-image-source: linear-gradient(to right, #58a96a, #a8d5ba);
+  color: #2f4f4f;
+  padding: 2rem 1.5rem; 
+  text-align: left;
+
+}
+
+section h2, section p {
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  text-align: left;
+}
+
+
+section h2 {
+  color: #439354;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* ===== Formulario ===== */
+form {
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #2f4f4f;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #a8d5ba;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+  transition: border-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #439354;
+  outline: none;
+}
+
+form button {
+  background-color: #58a96a;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #439354;
+  outline: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #439354;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  bottom: 0;
+  width: 100%;
+  font-weight: 600;
+  flex-shrink: 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Botón enfermera y chat ===== */
+#boton-bot {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 14px 22px;
+  background: #58a96a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+#boton-bot:hover,
+#boton-bot:focus {
+  background: #439354;
+  outline: none;
+}
+
+#chat-container {
+  display: none;
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1000;
+}
+
+#chat-container > div:first-child {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #2f4f4f;
+  font-size: 1.1rem;
+}
+
+#chat-container > div:first-child span {
+  font-size: 26px;
+  margin-right: 10px;
+}
+
+#chat-mensajes {
+  max-height: 220px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  color: #444;
+}
+
+.mensaje-bot {
+  margin-bottom: 8px;
+  background: #e2f0e9;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+#input-chat {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1.8px solid #a8d5ba;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#input-chat:focus {
+  outline: none;
+  border-color: #439354;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  .contenedor-enfermera {
+    max-width: 180px;
+  }
+  .contenedor-menu-circular {
+    gap: 1.2rem;
+  }
+  .circle-link {
+    width: 80px;
+    height: 80px;
+    font-size: 1.15rem;
+  }
+  main {
+    padding: 0 1rem;
+  }
+  .menu-lateral {
+    width: 140px;
+    top: 70px;
+    padding: 1rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-lateral {
+    display: none;
+  }
+}
+
+/* === FAQs === */
+#faqs {
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #a8d5ba;
+  padding-bottom: 1rem;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f4f4f;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+  content: '−';
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-weight: 400;
+  color: #3c5f5f;
+  padding-left: 0.5rem;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+}

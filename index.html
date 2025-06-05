@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacunas sin Mitos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <header>
+      <h1>Vacunas sin mitos </h1>
+       <p>Informate, protegé tu salud y la de los demás.</p>
+   <section class="pantalla-inicio" id="inicio">
+  <div class="contenedor-enfermera">
+    <img src="enfermera.png" alt="Enfermera ilustración" class="img-enfermera">
+  </div>
+  <div class="contenedor-menu-circular">
+    <a href="#que-son" class="circle-link">💉<span>¿Qué son?</span></a>
+    <a href="#importancia" class="circle-link">❤️<span>Importancia</span></a>
+    <a href="#vacunas-obligatorias" class="circle-link">📋<span>Obligatorias</span></a>
+    <a href="#FAQs" class="circle-link">❓<span>FAQs</span></a>
+    <a href="#vof" class="circle-link">🧠<span>Quiz</span></a>
+    <a href="#contacto" class="circle-link">📨<span>Contacto</span></a>
+  </div>
+</section>
+    </header>
+    <!-- MENU OCULTO LADO IZQUIERDO -->
+<nav id="menu-lateral" class="menu-lateral oculto">
+  <a href="#que-son">¿Qué son?</a>
+  <a href="#importancia">Importancia</a>
+  <a href="#vacunas-obligatorias">Obligatorias</a>
+  <a href="#FAQs">FAQs</a>
+  <a href="#vof">Quiz</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a Vacunas sin Mitos</h2>
+            <p>Desmitificando las vacunas para un futuro más saludable.</p>
+        </section>
+
+        <section id="que-son">
+            <h2>¿Qué son las vacunas?</h2>
+            <p>Las vacunas son sustancias que ayudan al cuerpo a desarrollar defensas contra enfermedades. Funcionan enseñando al sistema inmunológico a reconocer y combatir virus o bacterias sin causar la enfermedad. Así, si en el futuro la persona se expone al verdadero virus, su cuerpo sabrá cómo defenderse.</p>
+            <h3>¿Cómo funcionan las vacunas en el cuerpo? </h3>
+            <p>Las vacunas funcionan preparando al cuerpo para defenderse de ciertas enfermedades sin necesidad de que la persona se enferme. Al vacunarnos, se introduce en el organismo una versión debilitada, inactiva o una parte del virus o bacteria que causa la enfermedad. Esto no provoca la enfermedad, pero sí activa el sistema inmunológico, que aprende a reconocer ese agente como una amenaza. De esta forma, el cuerpo produce defensas llamadas anticuerpos y guarda esa información como una “memoria”. Así, si en el futuro la persona entra en contacto con el virus o bacteria real, el cuerpo lo detecta rápidamente y lo combate de manera eficaz, evitando que cause daño. </p>
+          </section>
+
+        <section id="importancia">
+            <h2>Importancia de las vacunas</h2>
+            <p>Las vacunas son fundamentales para cuidar nuestra salud y la de toda la comunidad. Nos protegen de enfermedades peligrosas al entrenar a nuestro cuerpo para defenderse si entra en contacto con virus o bacterias. Además, cuando muchas personas están vacunadas, se reduce la circulación de esos virus, lo que ayuda a proteger también a quienes no pueden vacunarse, como los bebés o personas con ciertas condiciones de salud. Gracias a las vacunas, muchas enfermedades graves han sido controladas o eliminadas. Son seguras, efectivas y una de las herramientas más importantes para prevenir contagios y salvar vidas.</p>
+            <h3>Beneficios de vacunarse </h3>
+            <p>Vacunarse tiene beneficios importantes tanto para cada persona como para la sociedad. A nivel individual, protege contra enfermedades graves, reduce el riesgo de complicaciones y fortalece el sistema inmunológico. Además, en muchos casos, evita hospitalizaciones y puede salvar vidas. A nivel social, cuando muchas personas están vacunadas, se forma una protección colectiva conocida como inmunidad de grupo, que ayuda a frenar la circulación de virus y protege especialmente a quienes no pueden vacunarse por motivos médicos. Así, vacunarse no solo es un acto de cuidado personal, sino también de responsabilidad y solidaridad con los demás. </p>
+        </section>
+
+        <section id="vacunas-obligatorias">
+            <h2>Vacunas obligatorias</h2>
+            <p>...</p>
+                <!-- aca tabla con vacunas segun la edad  -->
+            
+        </section>
+
+        <section id="FAQs">
+            <h2>Preguntas Frecuentes (FAQs)</h2>
+             <div class="faq-item">
+    <button class="faq-question">¿Las vacunas causan autismo?</button>
+    <div class="faq-answer">
+      <p>No. Numerosos estudios científicos han demostrado que no existe relación entre las vacunas y el autismo.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Es obligatorio vacunarme?</button>
+    <div class="faq-answer">
+      <p>En muchos países hay vacunas obligatorias para proteger la salud pública, especialmente en niños y grupos vulnerables.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">¿Puedo vacunarme si estoy resfriado?</button>
+    <div class="faq-answer">
+      <p>Generalmente sí, si los síntomas son leves. Pero es mejor consultar con un profesional de salud.</p>
+    </div>
+        </section>
+
+        <section id="vof">
+            <h2>Quiz: Verdadero o Falso</h2>
+            
+        </section>
+
+
+<!-- BOTÓN Y CHAT CON ENFERMERA -->
+<button id="boton-bot" style="position:fixed;bottom:20px;right:20px;padding:12px 20px;background:#4caf50;color:white;border:none;border-radius:30px;font-weight:bold;cursor:pointer;z-index:1000;">
+  💉 Hablar con la enfermera
+</button>
+
+<div id="chat-container" style="display:none;position:fixed;bottom:90px;right:20px;width:320px;background:#f9f9f9;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.3);padding:12px;z-index:1000;font-family:sans-serif;">
+  <div style="display:flex;align-items:center;margin-bottom:10px;">
+    <span style="font-size:24px; margin-right:8px;">👩‍⚕️</span>
+    <strong>Enfermera Sofía</strong>
+  </div>
+  <div id="chat-mensajes" style="max-height:220px;overflow-y:auto;font-size:14px;padding:5px 0;">
+    <div class="mensaje-bot" style="margin-bottom:8px;background:#e0f7fa;padding:8px;border-radius:8px;">Hola, soy la enfermera Sofía 😊<br>Decime tu edad y te cuento qué vacunas te corresponden según el calendario argentino.</div>
+  </div>
+  <input type="text" id="input-chat" placeholder="Escribí tu edad..." style="width:100%;margin-top:10px;padding:8px;border:1px solid #ccc;border-radius:6px;">
+</div>
+
+<script>
+  document.getElementById('boton-bot').addEventListener('click', function () {
+    const chat = document.getElementById('chat-container');
+    chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.getElementById('input-chat').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      const edad = parseInt(this.value.trim());
+      const chatMensajes = document.getElementById('chat-mensajes');
+
+      const msgUser = document.createElement('div');
+      msgUser.textContent = "👤 " + this.value;
+      msgUser.style.textAlign = "right";
+      msgUser.style.marginBottom = "6px";
+      chatMensajes.appendChild(msgUser);
+
+      let respuesta = "";
+
+      if (isNaN(edad)) {
+        respuesta = "👩‍⚕️ Ingresá una edad válida por favor.";
+      } else if (edad === 0) {
+        respuesta = "👶 0 años: Recibe BCG y Hepatitis B al nacer.";
+      } else if (edad === 2) {
+        respuesta = "👶 2 meses: Pentavalente, Neumococo conjugada, IPV y rotavirus.";
+      } else if (edad === 11) {
+        respuesta = "👧 11 años: VPH, meningococo y triple bacteriana acelular.";
+      } else if (edad >= 65) {
+        respuesta = "👵 Mayores de 65: Antigripal anual, antineumocócica y doble bacteriana.";
+      } else {
+        respuesta = "👩‍⚕️ Para esa edad, revisá el calendario completo en la sección de vacunas obligatorias.";
+      }
+
+      const msgBot = document.createElement('div');
+      msgBot.textContent = respuesta;
+      msgBot.style.background = "#e0f7fa";
+      msgBot.style.padding = "8px";
+      msgBot.style.borderRadius = "8px";
+      msgBot.style.marginBottom = "8px";
+      chatMensajes.appendChild(msgBot);
+
+      this.value = "";
+      chatMensajes.scrollTop = chatMensajes.scrollHeight;
+    }
+  });
+
+  
+  // Mostrar menú lateral al tocar un enlace circular
+  document.querySelectorAll('.circle-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-lateral').classList.remove('oculto');
+    });
+  });
+
+  // Muestra preguntas del FAQs
+    const faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      btn.classList.toggle('active');
+      answer.classList.toggle('open');
+    });
+  });
+
+</script>
+
+
+
+    <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Ante cualquier duda, consulta U opinión, llenar este formulario: </p>
+            <form>
+  <label for="nombre">Nombre y apellido:</label><br>
+  <input 
+    type="text" 
+    id="nombreApellido" 
+    name="nombreApellido" 
+    required 
+    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" 
+    title="Solo letras y espacios" 
+    placeholder="Nombre y Apellido"
+  ><br><br>
+
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required><br><br>
+
+  <label for="mensaje">Mensaje:</label><br>
+  <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea><br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+        </section>
+    </main>
+    
+<footer>
+    <p>&copy; 2025 Vacunas sin Mitos. Todos los derechos reservados.</p>
+    <p>CET</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="quiz.js"></script>
+
+
+<!-- 1/6: maquetado del HTML y menu   -->
+
+
+
+</body>
+</html>
