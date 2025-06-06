@@ -21,7 +21,9 @@
     <a href="#vacunas-obligatorias" class="circle-link">📋<span>Obligatorias</span></a>
     <a href="#FAQs" class="circle-link">❓<span>FAQs</span></a>
     <a href="#vof" class="circle-link">🧠<span>Quiz</span></a>
+    <a href="#mapa-de-hospitales" class="circle-link">🏥<span>Hospitales</span></a>
     <a href="#contacto" class="circle-link">📨<span>Contacto</span></a>
+
   </div>
 </section>
     </header>
@@ -32,6 +34,7 @@
   <a href="#vacunas-obligatorias">Obligatorias</a>
   <a href="#FAQs">FAQs</a>
   <a href="#vof">Quiz</a>
+  <a href="#mapa-de-hospitales">Hospitales</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
@@ -88,6 +91,32 @@
         <section id="vof">
             <h2>Quiz: Verdadero o Falso</h2>
             
+        <div class="result" id="result"></div>
+        </section>
+    
+        <!-- Muestra el mapa de hospitales. agregar al menu!!!! -->
+<section id="mapa-de-hospitales">
+          <h2>Hospitales cerca de vos</h2>
+          <p>Buscá centros de salud cercanos directamente en este mapa interactivo:</p>
+
+          <div style="width:100%; height:500px; margin-bottom: 20px;">
+            <iframe 
+              src="https://epok.buenosaires.gob.ar/pub/mapa/usig/leaflet_salud/" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div style="text-align: center;">
+            <img 
+              src="especificaciones-del-mapa-hospitales.png" 
+              alt="Leyenda de hospitales del mapa" 
+              style="max-width: 100%; height: auto;" />
+          </div>
         </section>
 
 
@@ -171,6 +200,8 @@
       answer.classList.toggle('open');
     });
   });
+
+
 
 </script>
 

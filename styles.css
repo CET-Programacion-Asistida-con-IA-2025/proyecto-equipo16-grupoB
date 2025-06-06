@@ -18,7 +18,9 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   padding-bottom: 120px;
+  overflow-x: hidden;
 }
+
 
 /* ===== Header ===== */
 header {
@@ -252,6 +254,7 @@ footer {
   box-shadow: 0 5px 12px rgba(0,0,0,0.15);
   transition: background 0.3s ease;
   z-index: 1000;
+  animation: pulse 2.5s infinite;
 }
 
 #boton-bot:hover,
@@ -287,6 +290,12 @@ footer {
   font-size: 26px;
   margin-right: 10px;
 }
+
+#chat-container.hidden {
+  display: none;
+  pointer-events: none;
+}
+
 
 #chat-mensajes {
   max-height: 220px;
@@ -353,6 +362,13 @@ footer {
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .menu-lateral {
+    display: none;
+  }
+}
+
 
 /* === FAQs === */
 #faqs {
