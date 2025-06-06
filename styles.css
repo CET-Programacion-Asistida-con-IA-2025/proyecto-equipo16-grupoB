@@ -389,6 +389,308 @@ footer {
 .faq-question.active::after {
   content: '−';
 }
+/*quiz d vacunas 5/6 by cami, solo 5 preguntas */
+
+.quiz-intro {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+  border-radius: 15px;
+  margin: 1rem 0;
+}
+
+.iniciar-quiz-btn {
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+}
+
+.iniciar-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pregunta-numero {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pregunta-texto {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+  line-height: 1.4;
+}
+
+.opciones-quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.opcion-btn {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.opcion-btn:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  transform: translateY(-1px);
+}
+
+.progreso-quiz {
+  margin-top: 2rem;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progreso {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #2196f3);
+  transition: width 0.5s ease;
+}
+
+.resultado-pregunta {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.resultado-pregunta.correcto {
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  color: #2e7d32;
+}
+
+.resultado-pregunta.incorrecto {
+  background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+  color: #c62828;
+}
+
+.icono-resultado {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-resultado {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.explicacion {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #2196f3;
+  line-height: 1.6;
+}
+
+.siguiente-btn {
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.siguiente-btn:hover {
+  transform: translateY(-2px);
+}
+
+.resultado-final {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.resultado-final.aprobado {
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  color: #2e7d32;
+}
+
+.resultado-final.desaprobado {
+  background: linear-gradient(135deg, #fff3e0, #ffcc80);
+  color: #ef6c00;
+}
+
+.icono-final {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.puntaje {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.mensaje-final {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mensaje-final a {
+  color: #2196f3;
+  text-decoration: none;
+  border-bottom: 2px solid #2196f3;
+}
+
+.mensaje-final a:hover {
+  background: #2196f3;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.resumen-respuestas {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.resumen-respuestas h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.respuesta-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #ddd;
+}
+
+.respuesta-item.correcto {
+  border-left-color: #4caf50;
+  background: #f1f8e9;
+}
+
+.respuesta-item.incorrecto {
+  border-left-color: #f44336;
+  background: #fef7f7;
+}
+
+.pregunta-resumen {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.respuesta-resumen {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.respuesta-correcta {
+  font-size: 14px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.botones-finales {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reiniciar-btn, .volver-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.reiniciar-btn {
+  background: linear-gradient(45deg, #ff9800, #f57c00);
+  color: white;
+}
+
+.volver-btn {
+  background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+  color: white;
+}
+
+.reiniciar-btn:hover, .volver-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .pregunta-texto {
+    font-size: 18px;
+  }
+  
+  .opciones-quiz {
+    gap: 0.8rem;
+  }
+  
+  .opcion-btn {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  
+  .botones-finales {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .reiniciar-btn, .volver-btn {
+    width: 200px;
+  }
+}
 
 .faq-answer {
   max-height: 0;
@@ -402,3 +704,4 @@ footer {
 .faq-answer.open {
   max-height: 300px;
 }
+/*fin d quiz d vacunas 5/6*/
