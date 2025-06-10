@@ -216,4 +216,25 @@ document.addEventListener('DOMContentLoaded', function() {
 /*hasta acá las 5 q mandé al grupo de wpp*/
 
 
+// Mensaje confirmacion envio formulario
+
+  const formulario = document.querySelector("form");
+  const mensajeConfirmacion = document.getElementById("mensajeConfirmacion");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault(); // evita que se recargue la página
+
+    // Opcional: limpiar los campos
+    formulario.reset();
+
+    // Mostrar el mensaje
+    mensajeConfirmacion.style.display = "block";
+
+    // Ocultarlo después de 5 segundos
+    setTimeout(() => {
+      mensajeConfirmacion.style.display = "none";
+    }, 5000);
+  });
+
+
 

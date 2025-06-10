@@ -407,16 +407,18 @@ footer {
 }
 /*quiz d vacunas 5/6 by cami, solo 5 preguntas */
 
+/* Quiz de Vacunas - Estética Verde Saludable */
+
 .quiz-intro {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   border-radius: 15px;
   margin: 1rem 0;
 }
 
 .iniciar-quiz-btn {
-  background: linear-gradient(45deg, #4caf50, #45a049);
+  background: linear-gradient(45deg, #4caf50, #388e3c);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -444,7 +446,7 @@ footer {
 
 .pregunta-numero {
   font-size: 14px;
-  color: #666;
+  color: #4e944f;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -454,7 +456,7 @@ footer {
   font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
-  color: #333;
+  color: #2e7d32;
   line-height: 1.4;
 }
 
@@ -466,8 +468,8 @@ footer {
 }
 
 .opcion-btn {
-  background: #f8f9fa;
-  border: 2px solid #e9ecef;
+  background: #f1f8e9;
+  border: 2px solid #c8e6c9;
   padding: 15px 20px;
   font-size: 16px;
   border-radius: 10px;
@@ -477,8 +479,8 @@ footer {
 }
 
 .opcion-btn:hover {
-  background: #e3f2fd;
-  border-color: #2196f3;
+  background: #dcedc8;
+  border-color: #81c784;
   transform: translateY(-1px);
 }
 
@@ -489,14 +491,14 @@ footer {
 .barra-progreso {
   width: 100%;
   height: 8px;
-  background: #e9ecef;
+  background: #e0f2f1;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progreso {
   height: 100%;
-  background: linear-gradient(90deg, #4caf50, #2196f3);
+  background: linear-gradient(90deg, #66bb6a, #388e3c);
   transition: width 0.5s ease;
 }
 
@@ -508,12 +510,12 @@ footer {
 }
 
 .resultado-pregunta.correcto {
-  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  background: linear-gradient(135deg, #d0f0c0, #a5d6a7);
   color: #2e7d32;
 }
 
 .resultado-pregunta.incorrecto {
-  background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+  background: linear-gradient(135deg, #fbe9e7, #ffcdd2);
   color: #c62828;
 }
 
@@ -528,16 +530,16 @@ footer {
 }
 
 .explicacion {
-  background: #f8f9fa;
+  background: #f1f8e9;
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  border-left: 4px solid #2196f3;
+  border-left: 4px solid #66bb6a;
   line-height: 1.6;
 }
 
 .siguiente-btn {
-  background: linear-gradient(45deg, #2196f3, #1976d2);
+  background: linear-gradient(45deg, #66bb6a, #388e3c);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -562,13 +564,13 @@ footer {
 }
 
 .resultado-final.aprobado {
-  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  background: linear-gradient(135deg, #dcedc8, #a5d6a7);
   color: #2e7d32;
 }
 
 .resultado-final.desaprobado {
-  background: linear-gradient(135deg, #fff3e0, #ffcc80);
-  color: #ef6c00;
+  background: linear-gradient(135deg, #fffde7, #ffe082);
+  color: #f57c00;
 }
 
 .icono-final {
@@ -588,20 +590,20 @@ footer {
 }
 
 .mensaje-final a {
-  color: #2196f3;
+  color: #388e3c;
   text-decoration: none;
-  border-bottom: 2px solid #2196f3;
+  border-bottom: 2px solid #388e3c;
 }
 
 .mensaje-final a:hover {
-  background: #2196f3;
+  background: #388e3c;
   color: white;
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 .resumen-respuestas {
-  background: #f8f9fa;
+  background: #f1f8e9;
   padding: 2rem;
   border-radius: 15px;
   margin-bottom: 2rem;
@@ -609,7 +611,7 @@ footer {
 
 .resumen-respuestas h3 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #2e7d32;
   text-align: center;
 }
 
@@ -618,12 +620,12 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #c8e6c9;
 }
 
 .respuesta-item.correcto {
   border-left-color: #4caf50;
-  background: #f1f8e9;
+  background: #e8f5e9;
 }
 
 .respuesta-item.incorrecto {
@@ -665,12 +667,12 @@ footer {
 }
 
 .reiniciar-btn {
-  background: linear-gradient(45deg, #ff9800, #f57c00);
+  background: linear-gradient(45deg, #81c784, #4caf50);
   color: white;
 }
 
 .volver-btn {
-  background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+  background: linear-gradient(45deg, #66bb6a, #388e3c);
   color: white;
 }
 
@@ -678,31 +680,30 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .quiz-container {
     padding: 1.5rem;
     margin: 0 1rem;
   }
-  
+
   .pregunta-texto {
     font-size: 18px;
   }
-  
+
   .opciones-quiz {
     gap: 0.8rem;
   }
-  
+
   .opcion-btn {
     padding: 12px 16px;
     font-size: 15px;
   }
-  
+
   .botones-finales {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .reiniciar-btn, .volver-btn {
     width: 200px;
   }
@@ -713,11 +714,10 @@ footer {
   overflow: hidden;
   transition: max-height 0.3s ease;
   font-weight: 400;
-  color: #3c5f5f;
+  color: #2e7d32;
   padding-left: 0.5rem;
 }
 
 .faq-answer.open {
   max-height: 300px;
 }
-/*fin d quiz d vacunas 5/6*/
