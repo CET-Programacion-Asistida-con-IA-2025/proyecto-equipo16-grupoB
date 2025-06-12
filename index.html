@@ -48,7 +48,7 @@
             <h2>¿Qué son las vacunas?</h2>
             <p>Las vacunas son sustancias que ayudan al cuerpo a desarrollar defensas contra enfermedades. Funcionan enseñando al sistema inmunológico a reconocer y combatir virus o bacterias sin causar la enfermedad. Así, si en el futuro la persona se expone al verdadero virus, su cuerpo sabrá cómo defenderse.</p>
             <h3>¿Cómo funcionan las vacunas en el cuerpo? </h3>
-            <p>Las vacunas funcionan preparando al cuerpo para defenderse de ciertas enfermedades sin necesidad de que la persona se enferme. Al vacunarnos, se introduce en el organismo una versión debilitada, inactiva o una parte del virus o bacteria que causa la enfermedad. Esto no provoca la enfermedad, pero sí activa el sistema inmunológico, que aprende a reconocer ese agente como una amenaza. De esta forma, el cuerpo produce defensas llamadas anticuerpos y guarda esa información como una “memoria”. Así, si en el futuro la persona entra en contacto con el virus o bacteria real, el cuerpo lo detecta rápidamente y lo combate de manera eficaz, evitando que cause daño. </p>
+            <p>Las vacunas funcionan preparando al cuerpo para defenderse de ciertas enfermedades sin necesidad de que la persona se enferme. Al vacunarnos, se introduce en el organismo una versión debilitada, inactiva o una parte del virus o bacteria que causa la enfermedad. Esto no provoca la enfermedad, pero sí activa el sistema inmunológico, que aprende a reconocer ese agente como una amenaza. De esta forma, el cuerpo produce defensas llamadas anticuerpos y guarda esa información como una "memoria". Así, si en el futuro la persona entra en contacto con el virus o bacteria real, el cuerpo lo detecta rápidamente y lo combate de manera eficaz, evitando que cause daño. </p>
           </section>
 
         <section id="importancia">
@@ -135,73 +135,110 @@
 </div>
 
 <script>
-  document.getElementById('boton-bot').addEventListener('click', function () {
-    const chat = document.getElementById('chat-container');
-    chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
-  });
+function extraerEdad(texto) {
+  const textoLimpio = texto.toLowerCase().trim();
 
-  document.getElementById('input-chat').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      const edad = parseInt(this.value.trim());
-      const chatMensajes = document.getElementById('chat-mensajes');
+  // Patrones para meses
+  const patronMeses = /(\d+)\s*(mes(?:es)?)/;
+  const patronAnios = /(\d+)\s*(años?|año)/;
 
-      const msgUser = document.createElement('div');
-      msgUser.textContent = "👤 " + this.value;
-      msgUser.style.textAlign = "right";
-      msgUser.style.marginBottom = "6px";
-      chatMensajes.appendChild(msgUser);
-
-      let respuesta = "";
-
-      if (isNaN(edad)) {
-        respuesta = "👩‍⚕️ Ingresá una edad válida por favor.";
-      } else if (edad === 0) {
-        respuesta = "👶 0 años: Recibe BCG y Hepatitis B al nacer.";
-      } else if (edad === 2) {
-        respuesta = "👶 2 meses: Pentavalente, Neumococo conjugada, IPV y rotavirus.";
-      } else if (edad === 11) {
-        respuesta = "👧 11 años: VPH, meningococo y triple bacteriana acelular.";
-      } else if (edad >= 65) {
-        respuesta = "👵 Mayores de 65: Antigripal anual, antineumocócica y doble bacteriana.";
-      } else {
-        respuesta = "👩‍⚕️ Para esa edad, revisá el calendario completo en la sección de vacunas obligatorias.";
-      }
-
-      const msgBot = document.createElement('div');
-      msgBot.textContent = respuesta;
-      msgBot.style.background = "#e0f7fa";
-      msgBot.style.padding = "8px";
-      msgBot.style.borderRadius = "8px";
-      msgBot.style.marginBottom = "8px";
-      chatMensajes.appendChild(msgBot);
-
-      this.value = "";
-      chatMensajes.scrollTop = chatMensajes.scrollHeight;
+  const matchMeses = textoLimpio.match(patronMeses);
+  if (matchMeses) {
+    const meses = parseInt(matchMeses[1]);
+    if (meses >= 0 && meses <= 24) {
+      return { meses };
     }
-  });
+  }
 
-  
-  // Mostrar menú lateral al tocar un enlace circular
-  document.querySelectorAll('.circle-link').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('menu-lateral').classList.remove('oculto');
-    });
-  });
+  const matchAnios = textoLimpio.match(patronAnios);
+  if (matchAnios) {
+    const años = parseInt(matchAnios[1]);
+    if (años >= 0 && años <= 120) {
+      return { años };
+    }
+  }
 
-  // Muestra preguntas del FAQs
-    const faqButtons = document.querySelectorAll('.faq-question');
+  // Números sueltos como "6"
+  const soloNumero = textoLimpio.match(/^(\d+)$/);
+  if (soloNumero) {
+    const n = parseInt(soloNumero[1]);
+    if (n <= 2) return { años: n }; // suponer que es en años si es chiquito
+    if (n <= 120) return { años: n };
+  }
 
-  faqButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const answer = btn.nextElementSibling;
-      btn.classList.toggle('active');
-      answer.classList.toggle('open');
-    });
-  });
+  return null;
+}
 
+function obtenerRespuestaVacunas(edadObj) {
+  if (edadObj.meses !== undefined) {
+    const m = edadObj.meses;
+    if (m === 0) return "👶 Al nacer: BCG y Hepatitis B.";
+    if (m === 2) return "👶 2 meses: Pentavalente, Neumococo, IPV y Rotavirus.";
+    if (m === 3 || m === 4) return "👶 3-4 meses: Segunda dosis de las anteriores.";
+    if (m === 5 || m === 6) return "👶 5-6 meses: Terceras dosis.";
+    if (m >= 9 && m <= 11) return "👶 9-11 meses: Revisión pediátrica previa a refuerzos.";
+    return "👶 Bebé menor de 1 año: Recomendamos consultar el calendario mensual del primer año.";
+  }
 
+  const edad = edadObj.años;
+  if (edad === 1) return "👶 12 meses: Triple viral, Hepatitis A, Neumococo y Pentavalente.";
+  if (edad === 2) return "👶 15-18 meses: Refuerzo Triple viral y Varicela.";
+  if (edad >= 5 && edad <= 6) return "👧 5-6 años: DPT, Triple viral e IPV para escolaridad.";
+  if (edad === 11) return "👧 11 años: VPH, Meningococo y Triple bacteriana acelular.";
+  if (edad === 12) return "👧 12 años: Segunda dosis de VPH.";
+  if (edad >= 13 && edad <= 17) return "👦👧 Adolescentes: Verificar esquema, VPH, Triple bacteriana.";
+  if (edad >= 18 && edad <= 64) return "👩👨 Adultos: Doble bacteriana cada 10 años, antigripal anual si sos grupo de riesgo.";
+  if (edad >= 65) return "👵👴 Mayores de 65: Antigripal, antineumococo y doble bacteriana.";
 
+  return "👩‍⚕️ Te recomiendo ver el calendario nacional de vacunación para tu edad.";
+}
+
+// Chat
+document.getElementById('boton-bot').addEventListener('click', function () {
+  const chat = document.getElementById('chat-container');
+  chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
+});
+
+document.getElementById('input-chat').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    const textoUsuario = this.value.trim();
+    const chatMensajes = document.getElementById('chat-mensajes');
+
+    const msgUser = document.createElement('div');
+    msgUser.textContent = "👤 " + textoUsuario;
+    msgUser.style.textAlign = "right";
+    msgUser.style.marginBottom = "6px";
+    msgUser.style.background = "#e3f2fd";
+    msgUser.style.padding = "6px";
+    msgUser.style.borderRadius = "8px";
+    chatMensajes.appendChild(msgUser);
+
+    let respuesta = "";
+    const edadObj = extraerEdad(textoUsuario);
+
+    if (edadObj !== null) {
+      const fraseEdad = edadObj.meses !== undefined
+        ? `${edadObj.meses} meses`
+        : `${edadObj.años} años`;
+      respuesta = `👩‍⚕️ Perfecto, ${fraseEdad}. ${obtenerRespuestaVacunas(edadObj)}`;
+    } else {
+      respuesta = "👩‍⚕️ No pude entender tu edad. Escribí por ejemplo: 'tiene 6 meses', 'tengo 3 años', '25 años', etc.";
+    }
+
+    const msgBot = document.createElement('div');
+    msgBot.innerHTML = respuesta;
+    msgBot.style.background = "#e0f7fa";
+    msgBot.style.padding = "8px";
+    msgBot.style.borderRadius = "8px";
+    msgBot.style.marginBottom = "8px";
+    chatMensajes.appendChild(msgBot);
+
+    this.value = "";
+    chatMensajes.scrollTop = chatMensajes.scrollHeight;
+  }
+});
 </script>
+
 
     <section id="contacto">
             <h2>Contacto</h2>
@@ -248,8 +285,3 @@
 
 
 <!-- 1/6: maquetado del HTML y menu   -->
-
-
-
-</body>
-</html>
