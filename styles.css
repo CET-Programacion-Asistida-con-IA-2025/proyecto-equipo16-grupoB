@@ -723,7 +723,7 @@ footer {
 }
 
 /*vacunas obligatorias */
-  #vacunas-obligatorias {
+  .vacunas-obligatorias {
             background: transparent;
             margin-bottom: 3rem;
             border-bottom: 3px solid;
