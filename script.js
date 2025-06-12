@@ -213,9 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-/*hasta acá las 5 q mandé al grupo de wpp*/
-
-
 // Mensaje confirmacion envio formulario
 
   const formulario = document.querySelector("form");
@@ -236,5 +233,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
   });
 
+//FAQs
+document.addEventListener('DOMContentLoaded', function () {
+    const preguntas = document.querySelectorAll('.faq-question');
 
+    preguntas.forEach(pregunta => {
+      pregunta.addEventListener('click', () => {
+        const respuesta = pregunta.nextElementSibling;
+
+        // Cerrar otras respuestas si querés que se abra solo una a la vez:
+        document.querySelectorAll('.faq-answer').forEach(resp => {
+          if (resp !== respuesta) {
+            resp.style.maxHeight = null;
+          }
+        });
+
+        // Alternar visibilidad de la respuesta actual
+        if (respuesta.style.maxHeight) {
+          respuesta.style.maxHeight = null;
+        } else {
+          respuesta.style.maxHeight = respuesta.scrollHeight + "px";
+        }
+      });
+    });
+  });
 
