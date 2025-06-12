@@ -722,3 +722,188 @@ footer {
   max-height: 300px;
 }
 
+/*vacunas obligatorias */
+  #vacunas-obligatorias {
+            background: transparent;
+            margin-bottom: 3rem;
+            border-bottom: 3px solid;
+            border-image-slice: 1;
+            border-width: 3px 0 0 0;
+            border-image-source: linear-gradient(to right, #58a96a, #a8d5ba);
+            color: #2f4f4f;
+            padding: 2rem 1.5rem;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .vacunas-container {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .grupo-edad {
+            background: linear-gradient(135deg, rgba(168, 213, 186, 0.1), rgba(88, 169, 106, 0.05));
+            border-radius: 15px;
+            padding: 1.8rem;
+            border-left: 5px solid #58a96a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grupo-edad:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(88, 169, 106, 0.15);
+        }
+
+        .titulo-edad {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2f4f4f;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .emoji-edad {
+            font-size: 1.6rem;
+        }
+
+        .lista-vacunas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .vacuna-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #a8d5ba;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            transition: background 0.3s ease;
+        }
+
+        .vacuna-item:hover {
+            background: rgba(168, 213, 186, 0.2);
+            border-left-color: #58a96a;
+        }
+
+        .vacuna-nombre {
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+
+        .vacuna-descripcion {
+            color: #456456;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        .tabla-resumen {
+            background: linear-gradient(135deg, rgba(88, 169, 106, 0.08), rgba(168, 213, 186, 0.05));
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2.5rem;
+            border: 2px solid rgba(88, 169, 106, 0.2);
+        }
+
+        .tabla-resumen h3 {
+            color: #2f4f4f;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .tabla-vacunas {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(88, 169, 106, 0.1);
+        }
+
+        .tabla-vacunas th {
+            background: linear-gradient(135deg, #58a96a, #6bb77c);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .tabla-vacunas td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(168, 213, 186, 0.3);
+            color: #2f4f4f;
+            line-height: 1.5;
+        }
+
+        .tabla-vacunas tr:hover {
+            background: rgba(168, 213, 186, 0.1);
+        }
+
+        .etapa-tabla {
+            font-weight: bold;
+            color: #58a96a;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            #vacunas-obligatorias {
+                padding: 1.5rem 1rem;
+            }
+
+            .lista-vacunas {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+
+            .titulo-edad {
+                font-size: 1.2rem;
+            }
+
+            .tabla-vacunas {
+                font-size: 0.9rem;
+            }
+
+            .tabla-vacunas th,
+            .tabla-vacunas td {
+                padding: 0.8rem;
+            }
+
+            /* Tabla responsiva en móviles */
+            .tabla-vacunas thead {
+                display: none;
+            }
+
+            .tabla-vacunas tr {
+                display: block;
+                margin-bottom: 1rem;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(88, 169, 106, 0.1);
+            }
+
+            .tabla-vacunas td {
+                display: block;
+                text-align: left;
+                border: none;
+                padding: 0.8rem;
+                position: relative;
+                padding-left: 40%;
+            }
+
+            .tabla-vacunas td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0.8rem;
+                width: 35%;
+                font-weight: bold;
+                color: #58a96a;
+            }
+        }
+/* fin vacunas obligatorias */
