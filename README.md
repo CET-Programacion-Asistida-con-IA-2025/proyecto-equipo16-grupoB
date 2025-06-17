@@ -27,11 +27,12 @@ Nuestro objetivo es que este sitio contribuya a una mayor conciencia pública so
 
 ## 🎨 Tematica - Diseño visual
 
-Para empezar a construir nuestra pagina definimos los temas de interes y buscamos sobre todo más información que nos pudiera ayudar a entender mejor la problematica que abordamos.
+Para empezar a construir nuestra pagina definimos los temas de interes y buscamos sobre todo más información que nos pudiera ayudar a entender mejor la problematica que abordamos. Esto hizo definir el rumbo que ibamos a tomar, estableciendo objetivos.
  
 ![informacion_tema](https://github.com/user-attachments/assets/b35b2acb-7ae0-4976-afe8-0eef8d643c07)
 
-Desde un principio quisimos que la imagen del sitio web sea amigable y utilice una paleta de colores y un estilo visual que lo refleje. Despues, poco a poco fuimos incluyendo elementos interactivos que nos ayudaria para lograr nuestro objetivo de conscientización.
+Ya con la idea de la página formandose, tomamos elementos que iban a ser fundamentales para la imagen de la página, como su experiencia.
+Definimos una paleta de colores que se respeto en el desarrollo y estilo visual agradable para el usuario. Despues, poco a poco fuimos incluyendo elementos interactivos que nos ayudaria para lograr nuestro objetivo de conscientización.
 
 ![moodboard](https://github.com/user-attachments/assets/6355a815-266f-4c9f-b1be-c35e2d5f74b0)
 
