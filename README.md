@@ -25,10 +25,14 @@ Un poco de lo que encontrarán los usuarios en _"Vacunas sin Mitos"_
 
 Nuestro objetivo es que este sitio contribuya a una mayor conciencia pública sobre la importancia de vacunarse y a combatir la desinformación que circula en la sociedad.
 
-## 🎨 Diseño visual
+## 🎨 Tematica - Diseño visual
 
-Para construir la imagen que queremos que refleje la página definimos una paleta de colores y un estilo visual desde el principio. Despues, poco a poco fuimos incluyendo elementos interactivos que nos ayudaria para lograr nuestro objetivo de conscientización.
+Para empezar a construir nuestra pagina definimos los temas de interes y buscamos sobre todo más información que nos pudiera ayudar a entender mejor la problematica que abordamos.
  
+![informacion_tema](https://github.com/user-attachments/assets/b35b2acb-7ae0-4976-afe8-0eef8d643c07)
+
+Desde un principio quisimos que la imagen del sitio web sea amigable y utilice una paleta de colores y un estilo visual que lo refleje. Despues, poco a poco fuimos incluyendo elementos interactivos que nos ayudaria para lograr nuestro objetivo de conscientización.
+
 ![moodboard](https://github.com/user-attachments/assets/6355a815-266f-4c9f-b1be-c35e2d5f74b0)
 
 
