@@ -29,6 +29,6 @@ Nuestro objetivo es que este sitio contribuya a una mayor conciencia pública so
 
 Para construir la imagen que queremos que refleje la página definimos una paleta de colores y un estilo visual desde el principio. Despues, poco a poco fuimos incluyendo elementos interactivos que nos ayudaria para lograr nuestro objetivo de conscientización.
  
-![moodboard](https://github.com/user-attachments/assets/236d8c3c-1467-43e8-9406-f2afa401c0d4)
+![moodboard](https://github.com/user-attachments/assets/6355a815-266f-4c9f-b1be-c35e2d5f74b0)
 
 
