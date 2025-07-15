@@ -24,12 +24,9 @@ body {
 
 /* ===== Header ===== */
 header {
-  background: #a8d5ba;
-  color: #1b3b1b;
+  background-color: #c8e6c9;
   text-align: center;
   padding: 3rem 1rem 4rem;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
@@ -45,61 +42,166 @@ header p {
   letter-spacing: 1.2px;
 }
 
-/* ===== Pantalla Inicio - Imagen enfermera ===== */
-.contenedor-enfermera {
-  max-width: 250px;
-  margin: 2rem auto 1rem;
-}
+/* ===== heade Inicio - Imagen enfermera ===== */
 
-.img-enfermera {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
 
 /* ===== Menú circular moderno ===== */
-.contenedor-menu-circular {
+.contenedor-subindice {
+  background-color: #A8D4B9;
+  position:relative;
   display: flex;
-  justify-content: center;
-  gap: 1.8rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 2rem;
+  margin: 0 auto;     /* centra el contenedor */
+}
+
+/* Mitad izquierda - Texto */
+.left-half {
+  background-color: #A8D4B9;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.text-content {
+  max-width: 100%;
+  text-align: left;
+  position:relative;
+  bottom: 0;
+  left: auto;
+  padding: 2rem;
+}
+
+.text-content h1 {
+  font-size:2.5rem ;
+    color: #2980b9;
+    margin-bottom: 1rem;
+    line-height: 0.9;  
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;  
+    font-family: "Oswald", sans-serif;
+}
+
+.text-content p{
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: bold;  
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1;
+}
+
+/* Mitad derecha - Imagen con iconos */
+.right-half {
+  
+  background-color: #A8D4B9;
+    flex: 4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:1rem;
+}
+
+.main-image {
+    bottom: 0;
+    left: 50%;
+    object-fit:contain;
+    z-index: 10;
+}
+
+/* Contenedores para las columnas de iconos */
+.icons-column {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100px;
+}
+
+.left-column {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+.right-column {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-65%);
 }
 
 .circle-link {
-  background: #58a96a;
-  color: white;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.4rem;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  user-select: none;
+    width: 100px;
+    height: 100px;
+    background: #58a96a;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border: 3px solid white;
+    z-index: 10;
 }
 
-.circle-link:hover,
-.circle-link:focus {
-  background: #439354;
-  transform: scale(1.1);
-  outline: none;
+.circle-link:hover {
+    transform: scale(1.1);
+    background: #3d8e50;
 }
 
 .circle-link span {
-  font-size: 0.8rem;
-  margin-top: 6px;
-  font-weight: 400;
-  user-select: none;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .contenedor-subindice {
+        flex-direction: column;
+    }
+    
+    .left-half, .right-half {
+        flex: none;
+        height: auto;
+        min-height: 50vh;
+    }
+    
+    .text-content h1 {
+        font-size: 2rem;
+    }
+    
+    .text-content .tagline {
+        font-size: 1.3rem;
+    }
+    
+    .main-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .icons-column {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        transform: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 /* ===== Menú lateral ===== */
@@ -408,13 +510,28 @@ footer {
 /*quiz d vacunas 5/6 by cami, solo 5 preguntas */
 
 /* Quiz de Vacunas - Estética Verde Saludable */
+.seccion-quiz-imagen {
+  width: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.ninos-imagen {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform: scale(0.7); /* si lo querés más chico visualmente */
+  margin-bottom: 0;
+}
 
 .quiz-intro {
   text-align: center;
   padding: 2rem;
   background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
   border-radius: 15px;
-  margin: 1rem 0;
+  margin-bottom: 0%;
 }
 
 .iniciar-quiz-btn {
@@ -443,7 +560,18 @@ footer {
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
+#vof {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
+#importancia{
+    margin-bottom: 0;
+}
+
+#que-son{
+  margin-bottom: 0;
+}
 .pregunta-numero {
   font-size: 14px;
   color: #4e944f;
@@ -907,3 +1035,4 @@ footer {
             }
         }
 /* fin vacunas obligatorias */
+
